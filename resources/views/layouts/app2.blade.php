@@ -10,6 +10,8 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <title>MOZAIQ COLLECTION</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/Mozaiq.png') }}">
+
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <style>
         body {
@@ -101,7 +103,7 @@
         <nav class="navbar navbar-expand-md" style="box-shadow: 0 4px 2px -2px #84563c;">
             <div class="container d-flex justify-content-between align-items-center">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Moziq Collection
+                    <img src="{{ asset('assets/Mozaiq.png') }}" style="width: 24px" alt="Banner Image"> Moziq Collection
                 </a>
                 <div class="nav-icons">
                     <a href="#" id="search-icon"><ion-icon name="search-outline"></ion-icon></i></a>
