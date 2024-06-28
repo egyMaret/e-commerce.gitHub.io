@@ -9,6 +9,7 @@
             <br>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <a href="{{ route('products.create') }}" class="btn btn-primary">Tambah Produk</a>
+                <a href="{{ route('admin.orders') }}" class="btn btn-primary">Kelola Pesanan</a>
             </div>
         @endcan
         <br>
