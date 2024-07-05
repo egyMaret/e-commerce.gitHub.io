@@ -24,7 +24,7 @@ class AdminController extends Controller
     // Menampilkan daftar pesanan yang belum dikonfirmasi
     public function orders()
     {
-        $orders = Order::where('is_paid', false)->get();
+        $orders = Order::all();
         return view('admin.orders', compact('orders'));
     }
 

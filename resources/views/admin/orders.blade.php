@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
     <div class="container">
@@ -39,7 +39,7 @@
                         </td>
                         <td>
                             @if ($order->is_paid)
-                                <span class="badge badge-success">Dikonfirmasi</span>
+                                <span class="badge badge-success text-success">Dikonfirmasi</span>
                             @else
                                 <span class="badge badge-warning text-dark">Belum Dikonfirmasi</span>
                             @endif
