@@ -18,6 +18,7 @@
                     <th>Nomor Handphone</th>
                     <th>Tanggal Pesan</th>
                     <th>Bukti Pembayaran</th>
+                    <th>Total Harga</th>
                     <th>Status</th>
                     <th>Aksi</th>
                 </tr>
@@ -37,6 +38,7 @@
                                 Tidak ada bukti
                             @endif
                         </td>
+                        <td>{{ number_format($order->total_price, 0, ',', '.') }}</td>
                         <td>
                             @if ($order->is_paid)
                                 <span class="badge badge-success text-success">Dikonfirmasi</span>

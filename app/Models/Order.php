@@ -25,4 +25,14 @@ class Order extends Model
     {
         return $this->hasMany(DetailOrder::class);
     }
+
+    // Accessor untuk total harga
+    public function getTotalPriceAttribute()
+    {
+        $totalPrice = 0;
+        foreach ($this->detailOrders as $detailOrder) {
+            $totalPrice += $detailOrder->amount * $detailOrder->variant->product->price;
+        }
+        return $totalPrice;
+    }
 }

@@ -106,8 +106,12 @@
                     <img src="{{ asset('assets/Mozaiq.png') }}" style="width: 24px" alt="Banner Image"> Moziq Collection
                 </a>
                 <div class="nav-icons">
-                    <a href="#" id="search-icon"><ion-icon name="search-outline"></ion-icon></i></a>
-                    <a href="{{ route('cart.show') }}"><ion-icon name="cart-outline"></ion-icon></a>
+                    <a href="" id="search-icon"><ion-icon name="search-outline"></ion-icon></i></a>
+                    @auth
+                        @if (!Auth::user()->is_admin)
+                            <a href="{{ route('cart.show') }}"><ion-icon name="cart-outline"></ion-icon></a>
+                        @endif
+                    @endauth
                     @guest
                         <a href="{{ route('login') }}"><ion-icon name="person-circle-outline"></ion-icon></a>
                     @else
@@ -149,7 +153,8 @@
     <footer class="footer mt-auto py-3">
         <div class="container text-center">
             <p>Contact</p>
-            <a href="https://wa.me/6282154228424"><ion-icon name="logo-whatsapp" style="padding-top: 6px; padding-right: 16px;"></ion-icon></a>
+            <a href="https://wa.me/6282154228424"><ion-icon name="logo-whatsapp"
+                    style="padding-top: 6px; padding-right: 16px;"></ion-icon></a>
             <a href="https://www.instagram.com/egy_maret/"><ion-icon name="logo-instagram"></ion-icon></a>
             <p>Powered by Mozaiq Collection</p>
         </div>
